@@ -153,7 +153,7 @@ export default function Projects() {
           <span className="font-mono text-xs uppercase tracking-[4px] text-orange-500">
             Selected Work
           </span>
-          <h2 className="mt-4 text-4xl font-black leading-tight text-black sm:text-5xl">
+          <h2 className="mt-4 text-4xl font-bold leading-tight text-black sm:text-5xl">
             Projects, mapped out.
           </h2>
           <p className="mt-4 text-gray-500">
