@@ -1,0 +1,18 @@
+
+@import "tailwindcss";
+
+html.gsap-init,
+html.gsap-init body {
+  height: auto;
+}
+ 
+#smooth-wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+ 
+#smooth-content {
+  width: 100%;
+  overflow: visible;
+}
