@@ -1,13 +1,11 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Mail, Sparkles } from "lucide-react";
-
 const socials = [
-  { label: "GitHub", href: "https://github.com/your-username" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/your-username" },
-  { label: "Instagram", href: "https://instagram.com/your-username" },
+  { label: "GitHub", href: "https://github.com/Niteshpandey80" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/nitesh-panday-8a8811380" },
+  { label: "Instagram", href: "https://www.instagram.com/the_codinghub?igsh=MTlkb3BmeXdhMnlhNg%3D%3D" },
 ];
-
 const headline = "Let's build something";
 
 function MagneticButton({ children, ...props }) {
@@ -141,28 +139,26 @@ export default function Footer() {
 
         {/* Magnetic glowing CTA */}
         <MagneticButton
-          href="mailto:your.email@example.com"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 1.3 }}
-          whileHover={{ scale: 1.06 }}
-          whileTap={{ scale: 0.95 }}
-          className="relative mt-16 inline-flex items-center gap-2 rounded-2xl bg-orange-500 px-8 py-4 font-semibold text-white"
-        >
-          <motion.span
-            animate={{ opacity: [0.5, 1, 0.5], scale: [1, 1.15, 1] }}
-            transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
-            className="absolute inset-0 -z-10 rounded-2xl bg-orange-500 blur-2xl"
-          />
-          <motion.span
-            animate={{ rotate: [0, -12, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          >
-            <Mail size={18} />
-          </motion.span>
-          Contact Me
-        </MagneticButton>
+  href="https://myall-links-dnr2.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnuIvXo1MUGC8xCnU6cWVSBBCdjW0e8GzhBsUmFeQe8xtNcRHgyDrYsBHqD-8_aem_lDYdTp3esLLOYfS8M6GuZA"
+  target="_blank"
+  rel="noopener noreferrer"
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 1.3 }}
+  whileHover={{ scale: 1.06 }}
+  whileTap={{ scale: 0.95 }}
+  className="relative mt-16 inline-flex items-center gap-2 rounded-2xl bg-orange-500 px-8 py-4 font-semibold text-white"
+>
+ 
+  <motion.span
+    animate={{ rotate: [0, -12, 12, 0] }}
+    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+  >
+    <Mail size={18} />
+  </motion.span>
+  Contact Me
+</MagneticButton>
 
         {/* Socials */}
         <motion.div

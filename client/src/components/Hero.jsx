@@ -90,22 +90,28 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap justify-center gap-4 sm:mt-12 sm:gap-5 lg:justify-start">
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: .95 }}
-              className="rounded-2xl bg-orange-500 px-7 py-3.5 text-sm text-white shadow-xl sm:px-9 sm:py-4 sm:text-base"
-            >
-              <span className="flex items-center gap-3">
-                Explore Work
-                <FaArrowRight />
-              </span>
-            </motion.button>
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: .95 }}
+  onClick={() =>
+    window.open("https://github.com/Niteshpandey80", "_blank", "noopener,noreferrer")
+  }
+  className="rounded-2xl bg-orange-500 px-7 py-3.5 text-sm text-white shadow-xl sm:px-9 sm:py-4 sm:text-base"
+>
+  <span className="flex items-center gap-3">
+    Explore Work
+    <FaArrowRight />
+  </span>
+</motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="rounded-2xl border bg-white px-7 py-3.5 text-sm sm:px-9 sm:py-4 sm:text-base"
-            >
-              Download CV
-            </motion.button>
+            <motion.a
+  href="https://drive.google.com/uc?export=download&id=1-R8T0JIgcYotINNvN6Wy3ySS4ovCYak2"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  className="inline-block rounded-2xl border bg-white px-7 py-3.5 text-sm sm:px-9 sm:py-4 sm:text-base"
+>
+  Download CV
+</motion.a>
 
           </div>
 
