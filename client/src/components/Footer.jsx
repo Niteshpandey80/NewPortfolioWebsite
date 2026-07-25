@@ -150,7 +150,11 @@ export default function Footer() {
   whileTap={{ scale: 0.95 }}
   className="relative mt-16 inline-flex items-center gap-2 rounded-2xl bg-orange-500 px-8 py-4 font-semibold text-white"
 >
- 
+  <motion.span
+    animate={{ opacity: [0.5, 1, 0.5], scale: [1, 1.15, 1] }}
+    transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
+    className="absolute inset-0 -z-10 rounded-2xl bg-orange-500 blur-2xl"
+  />
   <motion.span
     animate={{ rotate: [0, -12, 12, 0] }}
     transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
