@@ -25,7 +25,7 @@ export default function Navbar() {
         }`}
       >
 
-        {/* LOGO */}
+
         <div className="flex items-center gap-3">
 
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black font-bold text-white shadow-md">
@@ -38,7 +38,6 @@ export default function Navbar() {
 
         </div>
 
-        {/* LINKS */}
         <div className="hidden items-center gap-8 lg:flex">
 
           {navLinks.map((link) => (
@@ -63,7 +62,7 @@ export default function Navbar() {
 
         </div>
 
-        {/* CTA */}
+       
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

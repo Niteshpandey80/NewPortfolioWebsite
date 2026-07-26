@@ -43,10 +43,10 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#fafafa] py-32">
 
-      {/* Dot Background */}
+      
       <div className="absolute inset-0 bg-[radial-gradient(#d6d6d6_1px,transparent_1px)] [background-size:22px_22px]"></div>
 
-      {/* Ambient glows */}
+ 
       <motion.div
         animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
@@ -58,7 +58,7 @@ export default function Footer() {
         className="pointer-events-none absolute right-1/3 bottom-1/4 h-[360px] w-[360px] translate-x-1/2 rounded-full bg-pink-300 opacity-20 blur-[120px]"
       />
 
-      {/* Slow rotating dashed ring, purely decorative */}
+     
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 100, ease: "linear" }}
@@ -67,7 +67,7 @@ export default function Footer() {
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
 
-        {/* Letter-by-letter headline reveal */}
+      
         <motion.h2
           initial="hidden"
           whileInView="show"
@@ -90,7 +90,6 @@ export default function Footer() {
           ))}
         </motion.h2>
 
-        {/* Script word with drawn underline */}
         <div className="relative">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -120,7 +119,6 @@ export default function Footer() {
             />
           </motion.svg>
 
-          {/* orbiting sparkles around the word */}
           <motion.span
             animate={{ rotate: [0, 15, 0], scale: [1, 1.2, 1] }}
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -137,7 +135,6 @@ export default function Footer() {
           </motion.span>
         </div>
 
-        {/* Magnetic glowing CTA */}
         <MagneticButton
   href="https://myall-links-dnr2.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnuIvXo1MUGC8xCnU6cWVSBBCdjW0e8GzhBsUmFeQe8xtNcRHgyDrYsBHqD-8_aem_lDYdTp3esLLOYfS8M6GuZA"
   target="_blank"

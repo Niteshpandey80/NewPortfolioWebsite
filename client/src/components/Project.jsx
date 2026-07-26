@@ -9,8 +9,6 @@ import {
   Wand2,
 } from "lucide-react";
 
-// Edit this array with your real projects.
-// pos = { top, left } as % within the orbit container (desktop only).
 const projects = [
   {
     id: "text-to-image-generator",
@@ -98,7 +96,7 @@ export default function Projects() {
   const spotlight = useMotionTemplate`radial-gradient(500px circle at ${mouseX}% ${mouseY}%, ${active.accent}14, transparent 70%)`;
 
   const handleMouseMove = (e) => {
-    if (rafId.current) return; // drop extra events until the next frame paints
+    if (rafId.current) return; 
     const { clientX, clientY } = e;
     rafId.current = requestAnimationFrame(() => {
       const rect = orbitRef.current.getBoundingClientRect();
@@ -111,10 +109,8 @@ export default function Projects() {
   return (
     <section className="relative overflow-hidden bg-[#fafafa] py-24">
 
-      {/* Dot Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#d6d6d6_1px,transparent_1px)] [background-size:22px_22px]"></div>
 
-      {/* Ambient floating color orbs — CSS-driven so they run on the compositor, not the JS thread */}
       <div className="pointer-events-none absolute left-[10%] top-24 h-72 w-72 animate-orbit-a rounded-full bg-pink-300 opacity-20 blur-[90px]" />
       <div className="pointer-events-none absolute right-[8%] bottom-24 h-80 w-80 animate-orbit-b rounded-full bg-orange-300 opacity-20 blur-[100px]" />
 
@@ -161,7 +157,6 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* ORBIT — desktop / large screens */}
         <motion.div
           ref={orbitRef}
           onMouseMove={handleMouseMove}
@@ -172,17 +167,15 @@ export default function Projects() {
           className="relative mx-auto hidden h-[760px] max-w-4xl lg:block"
         >
 
-          {/* Cursor-follow spotlight */}
           <motion.div
             className="pointer-events-none absolute inset-0 rounded-full"
             style={{ background: spotlight }}
           />
 
-          {/* Decorative rotating rings — CSS animated, transform-only */}
+   
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] animate-ring-slow rounded-full border border-dashed border-black/10" />
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[560px] w-[560px] animate-ring-slow-reverse rounded-full border border-dashed border-black/10" />
 
-          {/* Connector line — one-time draw, stroke-dashoffset only animates once so it's cheap */}
           <svg className="pointer-events-none absolute inset-0 h-full w-full">
             <AnimatePresence mode="wait">
               {active && (
@@ -203,7 +196,6 @@ export default function Projects() {
             </AnimatePresence>
           </svg>
 
-          {/* Center card — idle float */}
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
@@ -219,7 +211,7 @@ export default function Projects() {
                 className="relative flex h-full w-full flex-col items-center justify-center rounded-full bg-black px-10 text-center shadow-2xl"
                 style={{ boxShadow: `0 0 90px -18px ${active.accent}66` }}
               >
-                {/* soft pulsing halo behind the card */}
+             
                 <motion.span
                   animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.15, 0.5] }}
                   transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
@@ -255,7 +247,7 @@ export default function Projects() {
             </AnimatePresence>
           </motion.div>
 
-          {/* Satellite nodes */}
+  
           {projects.map((project) => {
             const isActive = project.id === activeId;
             const Icon = project.icon;
@@ -271,7 +263,7 @@ export default function Projects() {
                 style={{ top: project.pos.top, left: project.pos.left }}
               >
 
-                {/* Tag pills above the active node */}
+             
                 <AnimatePresence>
                   {isActive && (
                     <div className="absolute bottom-full left-1/2 mb-3 flex -translate-x-1/2 flex-col items-center gap-2">
@@ -291,7 +283,6 @@ export default function Projects() {
                   )}
                 </AnimatePresence>
 
-                {/* Spinning gradient ring behind the active node */}
                 {isActive && (
                   <motion.span
                     animate={{ rotate: 360 }}
@@ -345,7 +336,6 @@ export default function Projects() {
 
         </motion.div>
 
-        {/* MOBILE / TABLET — stacked cards, orbit doesn't translate well below lg */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:hidden">
           {projects.map((project) => {
             const Icon = project.icon;

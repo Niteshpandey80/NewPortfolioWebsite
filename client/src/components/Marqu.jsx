@@ -10,14 +10,12 @@ export default function Marqu() {
   return (
     <section className="relative overflow-hidden bg-[#fafafa] py-6">
 
-      {/* Dot Background above/below the strip */}
       <div className="absolute inset-0 bg-[radial-gradient(#d6d6d6_1px,transparent_1px)] [background-size:22px_22px]"></div>
 
       <div className="relative -rotate-1 border-y-2 border-black bg-orange-500 py-4 shadow-xl">
 
         <div className="flex w-max animate-marquee">
 
-          {/* two copies back to back for a seamless loop */}
           {[0, 1].map((copy) => (
             <div key={copy} className="flex shrink-0 items-center">
               {Array.from({ length: 6 }).map((_, i) => (

@@ -6,12 +6,10 @@ export default function About() {
   return (
     <section className="relative overflow-hidden bg-[#fafafa] py-24">
 
-      {/* Dot Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#d6d6d6_1px,transparent_1px)] [background-size:22px_22px]"></div>
 
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 sm:px-8 lg:grid-cols-2 lg:gap-12">
 
-        {/* IMAGE */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,7 +34,7 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* CONTENT */}
+
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
